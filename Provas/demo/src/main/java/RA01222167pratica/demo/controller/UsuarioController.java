@@ -87,7 +87,7 @@ public class UsuarioController {
 
         for (Usuario u: usuarios) {
             if (u.getEmail().equals(usuarioAtualizado.getEmail())) {
-                return ResponseEntity.status(400).build();
+                return ResponseEntity.status(409).build();
             }
         }
 
