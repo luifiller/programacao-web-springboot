@@ -1,6 +1,6 @@
 package biblioteca.biblioteca.sptech.school.controller;
 
-import biblioteca.biblioteca.sptech.school.dto.EscritorLivroDTO;
+import biblioteca.biblioteca.sptech.school.dto.escritor.EscritorLivroDTO;
 import biblioteca.biblioteca.sptech.school.entity.Escritor;
 import biblioteca.biblioteca.sptech.school.mapper.EscritorMapper;
 import biblioteca.biblioteca.sptech.school.repository.EscritorRepository;

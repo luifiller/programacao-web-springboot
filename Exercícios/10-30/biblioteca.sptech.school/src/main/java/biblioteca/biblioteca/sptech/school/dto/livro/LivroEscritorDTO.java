@@ -1,11 +1,9 @@
-package biblioteca.biblioteca.sptech.school.dto;
+package biblioteca.biblioteca.sptech.school.dto.livro;
 
 import lombok.Data;
 
 @Data
 public class LivroEscritorDTO {
-    private Long id;
-
     private String nome;
 
     private String anoPublicacao;

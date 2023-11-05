@@ -1,6 +1,6 @@
 package biblioteca.biblioteca.sptech.school.mapper;
 
-import biblioteca.biblioteca.sptech.school.dto.LivroEscritorDTO;
+import biblioteca.biblioteca.sptech.school.dto.livro.LivroEscritorDTO;
 import biblioteca.biblioteca.sptech.school.entity.Livro;
 
 public class LivroMapper {
@@ -11,7 +11,6 @@ public class LivroMapper {
 
         LivroEscritorDTO livroEscritorDTO = new LivroEscritorDTO();
 
-        livroEscritorDTO.setId(livro.getId());
         livroEscritorDTO.setNome(livro.getNome());
         livroEscritorDTO.setAnoPublicacao(String.valueOf(livro.getAnoPublicacao()));
         livroEscritorDTO.setAutor(livro.getAutor());

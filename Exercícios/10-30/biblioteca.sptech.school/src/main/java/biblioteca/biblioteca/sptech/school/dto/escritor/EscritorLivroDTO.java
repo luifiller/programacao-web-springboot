@@ -1,13 +1,12 @@
-package biblioteca.biblioteca.sptech.school.dto;
+package biblioteca.biblioteca.sptech.school.dto.escritor;
 
+import biblioteca.biblioteca.sptech.school.dto.livro.LivroEscritorDTO;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
 public class EscritorLivroDTO {
-    private Long id;
-
     private String nome;
 
     private String nacionalidade;

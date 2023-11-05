@@ -1,4 +1,4 @@
-package biblioteca.biblioteca.sptech.school.dto;
+package biblioteca.biblioteca.sptech.school.dto.escritor;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -8,11 +8,10 @@ import lombok.Data;
 
 @Data
 public class EscritorRequestDTO {
-    @NotNull
     @NotBlank
     private String nome;
 
-    @NotNull
+    @NotBlank
     private String nacionalidade;
 
     @NotNull

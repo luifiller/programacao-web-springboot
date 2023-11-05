@@ -1,7 +1,7 @@
 package biblioteca.biblioteca.sptech.school.mapper;
 
-import biblioteca.biblioteca.sptech.school.dto.EscritorLivroDTO;
-import biblioteca.biblioteca.sptech.school.dto.LivroEscritorDTO;
+import biblioteca.biblioteca.sptech.school.dto.escritor.EscritorLivroDTO;
+import biblioteca.biblioteca.sptech.school.dto.livro.LivroEscritorDTO;
 import biblioteca.biblioteca.sptech.school.entity.Escritor;
 import biblioteca.biblioteca.sptech.school.entity.Livro;
 
@@ -15,7 +15,6 @@ public class EscritorMapper {
 
         EscritorLivroDTO escritorDTO = new EscritorLivroDTO();
 
-        escritorDTO.setId(escritor.getId());
         escritorDTO.setNome(escritor.getNome());
         escritorDTO.setNacionalidade(escritor.getNacionalidade());
         escritorDTO.setQuantidadePublicacoes(escritor.getQuantidadePublicacoes());
@@ -41,7 +40,6 @@ public class EscritorMapper {
 
         LivroEscritorDTO livroEscritorDTO = new LivroEscritorDTO();
 
-        livroEscritorDTO.setId(livro.getId());
         livroEscritorDTO.setNome(livro.getNome());
         livroEscritorDTO.setAnoPublicacao(String.valueOf(livro.getAnoPublicacao()));
         livroEscritorDTO.setAutor(livro.getAutor());
@@ -61,7 +59,6 @@ public class EscritorMapper {
 
         Escritor escritor = new Escritor();
 
-        escritor.setId(escritorDTO.getId());
         escritor.setNome(escritorDTO.getNome());
         escritor.setNacionalidade(escritorDTO.getNacionalidade());
         escritor.setQuantidadePublicacoes(escritorDTO.getQuantidadePublicacoes());

@@ -1,4 +1,4 @@
-package biblioteca.biblioteca.sptech.school.dto;
+package biblioteca.biblioteca.sptech.school.dto.escritor;
 
 import lombok.Data;
 
