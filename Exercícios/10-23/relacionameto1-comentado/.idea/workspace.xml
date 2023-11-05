@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c7350b0f-b322-46b5-8451-089e42df8664" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../10-30/biblioteca.sptech.school/src/main/java/biblioteca/biblioteca/sptech/school/controller/EscritorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../10-30/biblioteca.sptech.school/src/main/java/biblioteca/biblioteca/sptech/school/controller/LivroController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../10-30/biblioteca.sptech.school/src/main/java/biblioteca/biblioteca/sptech/school/dto/EscritoLivroResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../10-30/biblioteca.sptech.school/src/main/java/biblioteca/biblioteca/sptech/school/dto/EscritorLivroDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../10-30/biblioteca.sptech.school/src/main/java/biblioteca/biblioteca/sptech/school/dto/EscritorRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../10-30/biblioteca.sptech.school/src/main/java/biblioteca/biblioteca/sptech/school/dto/LivroEscritorDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../10-30/biblioteca.sptech.school/src/main/java/biblioteca/biblioteca/sptech/school/entity/Escritor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../10-30/biblioteca.sptech.school/src/main/java/biblioteca/biblioteca/sptech/school/entity/Livro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../10-30/biblioteca.sptech.school/src/main/java/biblioteca/biblioteca/sptech/school/mapper/EscritorMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../10-30/biblioteca.sptech.school/src/main/java/biblioteca/biblioteca/sptech/school/mapper/LivroMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../10-30/biblioteca.sptech.school/src/main/java/biblioteca/biblioteca/sptech/school/repository/EscritorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../10-30/biblioteca.sptech.school/src/main/java/biblioteca/biblioteca/sptech/school/repository/LivroRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../10-30/biblioteca.sptech.school/src/main/java/biblioteca/biblioteca/sptech/school/service/EscritorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../10-30/biblioteca.sptech.school/src/main/java/biblioteca/biblioteca/sptech/school/service/LivroService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2XV01PiVlF2wdfpubzcdh7ol0ja" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c7350b0f-b322-46b5-8451-089e42df8664" name="Changes" comment="" />
+      <created>1698698724036</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698698724036</updated>
+      <workItem from="1698698725122" duration="6468000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
