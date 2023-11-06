@@ -1,19 +1,25 @@
 package biblioteca.biblioteca.sptech.school.mapper;
 
-import biblioteca.biblioteca.sptech.school.dto.escritor.EscritorLivroDTO;
-import biblioteca.biblioteca.sptech.school.dto.livro.LivroEscritorDTO;
+import biblioteca.biblioteca.sptech.school.dto.escritor.EscritorLivroResponseDTO;
+import biblioteca.biblioteca.sptech.school.dto.escritor.EscritorRequestDTO;
+import biblioteca.biblioteca.sptech.school.dto.escritor.LivroEscritorResponseDTO;
 import biblioteca.biblioteca.sptech.school.entity.Escritor;
 import biblioteca.biblioteca.sptech.school.entity.Livro;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.stereotype.Component;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
+@Component
 public class EscritorMapper {
-    public static EscritorLivroDTO toEscritorLivroDTO(Escritor escritor) {
+    public static EscritorLivroResponseDTO toEscritorLivroDTO(Escritor escritor) {
         if (escritor == null) {
-            return null;
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Escritor estava nulo.");
         }
 
-        EscritorLivroDTO escritorDTO = new EscritorLivroDTO();
+        EscritorLivroResponseDTO escritorDTO = new EscritorLivroResponseDTO();
 
         escritorDTO.setNome(escritor.getNome());
         escritorDTO.setNacionalidade(escritor.getNacionalidade());
@@ -23,46 +29,45 @@ public class EscritorMapper {
         if (!escritor.getLivros().isEmpty()) {
             List<Livro> livros = escritor.getLivros();
 
-            List<LivroEscritorDTO> livrosDTO = livros.stream()
+            List<LivroEscritorResponseDTO> livrosDTO = livros.stream()
                     .map(EscritorMapper::toLivroEscritorDTO)
                     .toList();
 
             escritorDTO.setLivros(livrosDTO);
+        } else {
+            escritorDTO.setLivros(null);
         }
 
         return escritorDTO;
     }
 
-    public static LivroEscritorDTO toLivroEscritorDTO(Livro livro) {
+    public static LivroEscritorResponseDTO toLivroEscritorDTO(Livro livro) {
         if (livro == null) {
             return null;
         }
 
-        LivroEscritorDTO livroEscritorDTO = new LivroEscritorDTO();
+        LivroEscritorResponseDTO livroEscritorResponseDTO = new LivroEscritorResponseDTO();
 
-        livroEscritorDTO.setNome(livro.getNome());
-        livroEscritorDTO.setAnoPublicacao(String.valueOf(livro.getAnoPublicacao()));
-        livroEscritorDTO.setAutor(livro.getAutor());
-        livroEscritorDTO.setEditora(livro.getEditora());
-        livroEscritorDTO.setGenero(livro.getGenero());
-        livroEscritorDTO.setQuantidadePaginas(livro.getQuantidadePaginas());
-        livroEscritorDTO.setPreco(livro.getPreco());
+        livroEscritorResponseDTO.setNome(livro.getNome());
+        livroEscritorResponseDTO.setAnoPublicacao(String.valueOf(livro.getAnoPublicacao()));
+        livroEscritorResponseDTO.setAutor(livro.getAutor());
+        livroEscritorResponseDTO.setEditora(livro.getEditora());
+        livroEscritorResponseDTO.setGenero(livro.getGenero());
+        livroEscritorResponseDTO.setQuantidadePaginas(livro.getQuantidadePaginas());
+        livroEscritorResponseDTO.setPreco(livro.getPreco());
 
-        return livroEscritorDTO;
+        return livroEscritorResponseDTO;
     }
 
     // para fazer POST
-    public static Escritor toEntity(EscritorLivroDTO escritorDTO) {
-        if (escritorDTO == null) {
-            return null;
-        }
-
+    public Escritor toEntity(EscritorRequestDTO escritorDTO) {
         Escritor escritor = new Escritor();
 
         escritor.setNome(escritorDTO.getNome());
         escritor.setNacionalidade(escritorDTO.getNacionalidade());
         escritor.setQuantidadePublicacoes(escritorDTO.getQuantidadePublicacoes());
         escritor.setIdade(escritorDTO.getIdade());
+        escritor.setLivros(null);
 
         return escritor;
     }

@@ -1,32 +1,41 @@
 package biblioteca.biblioteca.sptech.school.mapper;
 
-import biblioteca.biblioteca.sptech.school.dto.livro.LivroEscritorDTO;
+import biblioteca.biblioteca.sptech.school.dto.livro.EscLivroResponseDTO;
+import biblioteca.biblioteca.sptech.school.dto.livro.LivroEscResponseDTO;
+import biblioteca.biblioteca.sptech.school.entity.Escritor;
 import biblioteca.biblioteca.sptech.school.entity.Livro;
+import org.springframework.stereotype.Component;
 
+@Component
 public class LivroMapper {
-    public static LivroEscritorDTO toLivroEscritorDTO(Livro livro) {
+    public static LivroEscResponseDTO toLivroEscritorDTO(Livro livro) {
         if (livro == null) {
             return null;
         }
 
-        LivroEscritorDTO livroEscritorDTO = new LivroEscritorDTO();
+        LivroEscResponseDTO livroEscResponseDTO = new LivroEscResponseDTO();
 
-        livroEscritorDTO.setNome(livro.getNome());
-        livroEscritorDTO.setAnoPublicacao(String.valueOf(livro.getAnoPublicacao()));
-        livroEscritorDTO.setAutor(livro.getAutor());
-        livroEscritorDTO.setEditora(livro.getEditora());
-        livroEscritorDTO.setGenero(livro.getGenero());
-        livroEscritorDTO.setQuantidadePaginas(livro.getQuantidadePaginas());
-        livroEscritorDTO.setPreco(livro.getPreco());
+        livroEscResponseDTO.setNome(livro.getNome());
+        livroEscResponseDTO.setAnoPublicacao(String.valueOf(livro.getAnoPublicacao()));
+        livroEscResponseDTO.setAutor(livro.getAutor());
+        livroEscResponseDTO.setEditora(livro.getEditora());
+        livroEscResponseDTO.setGenero(livro.getGenero());
+        livroEscResponseDTO.setQuantidadePaginas(livro.getQuantidadePaginas());
+        livroEscResponseDTO.setPreco(livro.getPreco());
 
-        /* if (livro.getEscritor() != null) {
-            EscritoLivroResponseDTO escritor = LivroMapper.EscritorToEscritoLivroResponseDTO(livro.getEscritor());
-            // CONTINUAR DAQUI...
-        }*/
+        livroEscResponseDTO.setEscLivroResponseDTO(toEscritorLivroResponseDTO(livro.getEscritor()));
 
-        return livroEscritorDTO;
+        return livroEscResponseDTO;
     }
-/*
-    public static EscritoLivroResponseDTO EscritorToEscritoLivroResponseDTO(Escritor escritor) {
-    }*/
+
+    public static EscLivroResponseDTO toEscritorLivroResponseDTO(Escritor escritor) {
+        EscLivroResponseDTO escritor1 = new EscLivroResponseDTO();
+
+        escritor1.setIdade(escritor.getIdade());
+        escritor1.setNacionalidade(escritor.getNacionalidade());
+        escritor1.setNome(escritor.getNome());
+        escritor1.setQuantidadePublicacoes(escritor.getQuantidadePublicacoes());
+
+        return escritor1;
+    }
 }

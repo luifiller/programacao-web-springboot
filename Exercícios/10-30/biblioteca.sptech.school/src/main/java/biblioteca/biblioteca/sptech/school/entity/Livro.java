@@ -10,10 +10,9 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class Livro {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     private String nome;
 

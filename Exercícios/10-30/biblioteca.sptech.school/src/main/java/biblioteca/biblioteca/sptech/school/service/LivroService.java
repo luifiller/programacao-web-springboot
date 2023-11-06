@@ -15,4 +15,16 @@ public class LivroService {
     public List<Livro> listarTodos() {
         return livroRepository.findAll();
     }
+
+    public List<Livro> listarPorNome(String nome) {
+        return livroRepository.findLivrosByNomeContainingIgnoreCase(nome);
+    }
+
+    public List<Livro> listarPorEditora(String editora) {
+        return livroRepository.findLivrosByEditoraContainingIgnoreCase(editora);
+    }
+
+    public List<Livro> listarPorGenero(String genero) {
+        return livroRepository.findLivrosByGeneroContainingIgnoreCase(genero);
+    }
 }
